@@ -3,8 +3,6 @@ package com.microservices.springmoneytransferapi.model.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.math.BigDecimal;
-
 @AllArgsConstructor
 @Data
 @Getter
