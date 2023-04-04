@@ -1,11 +1,9 @@
 package com.microservices.springmoneytransferapi.repository;
 
-import com.safaricom.dxl.msmycountycounties.model.WhitelabelCounties;
-import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
+import com.microservices.springmoneytransferapi.model.entity.Account;
+import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
-import reactor.core.publisher.Flux;
 
 @Repository
-public interface AccountRepository extends ReactiveMongoRepository<WhitelabelCounties, String> {
-    Flux<WhitelabelCounties> findByActive(Boolean active);
+public interface AccountRepository extends ReactiveCrudRepository <Account, String> {
 }
