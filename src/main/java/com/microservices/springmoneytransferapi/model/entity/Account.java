@@ -3,6 +3,8 @@ package com.microservices.springmoneytransferapi.model.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @AllArgsConstructor
 @Data
 @Getter
@@ -23,12 +25,13 @@ public class Account {
     )
     private Long id;
 
-    private String initialBalance;
+    private BigDecimal initialBalance;
 
     public Account() {
     }
 
-    public Account(String initialBalance) {
+    public Account(BigDecimal initialBalance) {
         this.initialBalance = initialBalance;
     }
+
 }
