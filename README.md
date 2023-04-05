@@ -7,6 +7,7 @@ This is a RESTful API for creating accounts and implements money transfer betwee
 #### Prerequisites
 * JAVA
 * Spring boot
+* PostgreSQL
 
 ## Setup and Installation
 * Open Terminal:
