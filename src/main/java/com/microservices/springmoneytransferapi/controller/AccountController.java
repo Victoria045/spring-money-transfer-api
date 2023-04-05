@@ -20,20 +20,15 @@ public class AccountController {
 
     @PostMapping("/accounts")
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Account> createAccount(@RequestBody Account account) {
-        Account createdAccount = starterService.createAccount(account);
-        return new ResponseEntity<>(createdAccount, HttpStatus.CREATED);
+    public ResponseEntity<Account> createAccount(@RequestBody @Valid Account account) {
+        starterService.createAccount(account);
+        return ResponseEntity.status(HttpStatus.CREATED).body(account);
     }
 
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @GetMapping("/accounts/{id}")
     public Optional<Account> getAccountById(@PathVariable final Long id) {
         return starterService.getAccountById(id);
-    }
-
-    @GetMapping("/all")
-    public Account findAll(@RequestBody Account account) {
-        return starterService.findAll(account);
     }
 
     @PostMapping("/transfers")

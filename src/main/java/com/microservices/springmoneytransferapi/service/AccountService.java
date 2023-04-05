@@ -13,5 +13,4 @@ public interface AccountService {
 
     TransferRequest transferMoney(TransferRequest transferRequest) throws AccountNotFoundException;
 
-    Account findAll(Account account);
 }

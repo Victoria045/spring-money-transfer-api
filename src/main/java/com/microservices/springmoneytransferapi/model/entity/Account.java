@@ -3,6 +3,8 @@ package com.microservices.springmoneytransferapi.model.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 @AllArgsConstructor
@@ -23,8 +25,11 @@ public class Account {
             strategy = GenerationType.SEQUENCE,
             generator = "account_sequence"
     )
+    @NotNull(message = "Account ID cannot be null")
     private Long id;
 
+    @NotNull(message = "Transfer amount cannot be null")
+    @Min(value = 1, message = "Balance amount must be greater than zero")
     private BigDecimal initialBalance;
 
     public Account() {
