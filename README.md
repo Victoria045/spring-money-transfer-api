@@ -24,6 +24,13 @@ This is a RESTful API for creating accounts and implements money transfer betwee
         $ mvn spring:boot run
 ```
 ## API:
+#### Note:
+```bash
+         The application requires authorization by Basic Auth
+         Credentials: Username: development
+                      Password: dXNlcjpwYXNzd29yZA==
+                    
+```
 ### Create Account:
 ```bash
         POST localhost:8080/accounts/
