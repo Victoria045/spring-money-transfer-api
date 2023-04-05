@@ -1,2 +1,52 @@
 # spring-money-transfer-api
-This is a REST API that implements a simple money transfer between accounts.
+This is a RESTful API for creating accounts and implements money transfer between accounts.
+
+## Author 
+[Victoria Beryl](https://github.com/Victoria045)
+
+#### Prerequisites
+* JAVA
+* Spring boot
+
+## Setup and Installation
+* Open Terminal:
+```bash
+        $ git clone git@github.com:Victoria045/spring-money-transfer-api.git
+        $ open via your IDE preferably IntelliJ IDEA 
+```
+
+## Running the application
+* Open Terminal:
+```bash
+        $ mvn spring:boot run
+```
+## API:
+### Create Account:
+```bash
+        POST localhost:8080/accounts/
+        
+           Request Payload
+           {
+                {
+                  "initialBalance":2000
+                }
+            }
+```
+### Get Account:
+```bash
+        GET localhost:8080/accounts/{id}
+```
+### Transfer Money:
+```bash
+        POST localhost:8080/transfers
+        
+               Request Payload
+               {
+                    "sourceAccountId": 1,
+                    "targetAccountId": 2,
+                    "amount": 1000
+                }
+```
+
+### License
+[![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](git@github.com:Victoria045/spring-money-transfer-api.git/blob/master/LICENSE)
