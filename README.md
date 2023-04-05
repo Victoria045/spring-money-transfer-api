@@ -14,6 +14,8 @@ This is a RESTful API for creating accounts and implements money transfer betwee
 ```bash
         $ git clone git@github.com:Victoria045/spring-money-transfer-api.git
         $ open via your IDE preferably IntelliJ IDEA 
+        
+        Note: In the application properties set the correct credentials for PostgreSQL.
 ```
 
 ## Running the application
@@ -32,6 +34,8 @@ This is a RESTful API for creating accounts and implements money transfer betwee
                   "initialBalance":2000
                 }
             }
+            
+            Note: Initial balance cannot be either 0 or a negative value.
 ```
 ### Get Account:
 ```bash
