@@ -58,6 +58,8 @@ This is a RESTful API for creating accounts and implements money transfer betwee
                     "targetAccountId": 2,
                     "amount": 1000
                 }
+                
+                Note: Transaction wouldn't go through from source to target account if amount is insufficient.
 ```
 ### Screenshot:
 ![Screenshot from 2023-04-05 17-50-34](https://user-images.githubusercontent.com/50333645/230119026-f22cbfef-a3d0-440f-9c7c-593941f1d5bd.png)
